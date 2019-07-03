@@ -142,8 +142,8 @@ class DatabaseOperations(BaseDatabaseOperations):
         # attribute where the exact query sent to the database is saved.
         # See MySQLdb/cursors.py in the source distribution.
         query = getattr(cursor, '_executed', None)
-        if query is not None:
-            query = query.decode(errors='replace')
+        # if query is not None:
+        #     query = query.decode(errors='replace')
         return query
 
     def no_limit_value(self):
